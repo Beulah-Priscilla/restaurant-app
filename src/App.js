@@ -4,27 +4,14 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Article from "./Components/Article";
 import Section from "./Components/Section";
+import Nav from "./Components/Nav";
 
 
 
 function App() {
   return (
     <>
-    <Header />
-
-    <main>
-
-      <Article />
-
-      <Section />
-
-      <Section />
-
-      <Article />
-
-    </main>
-
-    <Footer />
+      <Nav />
     </>
   );
 }

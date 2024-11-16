@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import logo from "../images/Logo.svg"
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from "../../images/Logo.svg";
+import './Nav.css';
 
 
 const Nav = () => {
@@ -10,13 +12,15 @@ const Nav = () => {
     }
 
     return (
-        <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+        <nav className={`navbar`}>
             <a className="logo" href="/">
                 <img src={logo} alt="Logo"/>
             </a>
-            
+            <div className="menu-icon" onClick={toggleMenu}>
+                {menuOpen ? <FaTimes /> : <FaBars />}
+            </div>
             {/* nav items */}
-            <ul className={`nav-links`}>
+            <ul className={menuOpen ? "nav-links active" : "nav-links"}>
                 <li>
                     <a href='/'>Home</a>
                 </li>

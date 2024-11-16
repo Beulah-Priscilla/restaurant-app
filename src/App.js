@@ -4,7 +4,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Article from "./Components/Article";
 import Section from "./Components/Section";
-import Nav from "./Components/Nav";
+import Nav from "./Components/Nav/Nav";
 
 
 
@@ -12,6 +12,8 @@ function App() {
   return (
     <>
       <Nav />
+      <Header />
+      <Footer />
     </>
   );
 }

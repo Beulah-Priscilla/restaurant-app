@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    background-color: #4a5e57;
+}
+
+.logo {
+    margin-right: 0px;
+}
+
+.links {
+    list-style: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contacts {
+    list-style: none;
+}
+
+.contacts li{
+    color: #fff;
+}
+
+.socials {
+    list-style: none;
+}
+
+.socials li {
+    color: #fff;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}

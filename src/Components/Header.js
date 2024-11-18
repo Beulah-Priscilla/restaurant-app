@@ -1,12 +1,13 @@
 import React from "react";
+import Nav from "./Nav/Nav";
 
 // console.log(logo);
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className="container">
             <section>
-                
+                <Nav />
             </section>
         </header>
     );

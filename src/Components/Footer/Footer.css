@@ -28,17 +28,17 @@ footer {
     margin: 0;
 }
 
-.links {
+.footer-links {
     list-style: none;
 }
 
-.links a {
+.footer-links a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s;
 }
 
-.links a:hover {
+.footer-links a:hover {
     color: #f0a500;
 }
 

@@ -12,7 +12,7 @@ const Footer = () => {
                 </section>
                 <section className="footer-column">
                     <h4>Navigations</h4>
-                    <ul className="links">
+                    <ul className="footer-links">
                         <li><a href="/">Home</a></li>
                         <li><a href="/">About</a></li>
                         <li><a href="/">Menu</a></li>

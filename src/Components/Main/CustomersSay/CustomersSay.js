@@ -31,7 +31,19 @@ const testimonials = [
 function CustomersSay() {
   return (
     <section className="customers-say">
-      
+      <h2 className="title">Testimonials</h2>
+      <div className='testimonials-container'>
+        {testimonials.map((testimonial, index) => (
+          <article key={index} className='testimonial-card'>
+            <div className='stars'>{testimonial.stars}</div>
+            <p>{testimonial.text}</p>
+            <div className='author'>
+              <img src={testimonial.image} alt={`${testimonial.name}'s profile`}/>
+              <span>{testimonial.name}</span>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }

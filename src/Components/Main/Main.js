@@ -1,12 +1,16 @@
 import React from "react";
+import CallToAction from "./CallToAction/CallToAction";
+import Special from "./Specials/Special";
 
 
-const Main = () => {
-    return (
-        <main>
+function Main() {
+  return (
+    <>
+      <CallToAction />
+      <Special />
+    </>
+  );
+}
 
-        </main>
-    );
-};
 
 export default Main;

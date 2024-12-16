@@ -1,6 +1,6 @@
 import React from "react";
 import "./CallToAction.css";
-import heroImage from "../../../images/restauranfood.jpg"
+import heroImage from "../../images/restauranfood.jpg"
 
 
 const CallToAction = () => {

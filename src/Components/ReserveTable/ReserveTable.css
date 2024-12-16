@@ -1,0 +1,119 @@
+/* Main Container */
+.reserve-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem; /* Reduce gap for cleaner spacing */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.header-wrapper {
+  width: 55%; /* Match the form width */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 1rem; /* Space below heading */
+}
+
+.header-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.header-wrapper p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Content Wrapper: Form and Paragraph Side-by-Side */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Form Section */
+.form-wrapper {
+  background-color: #f3f4f6;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 55%;
+  box-sizing: border-box;
+}
+
+.reserve-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.reserve-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.reserve-form input,
+.reserve-form select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  padding: 0.75rem;
+  background-color: #e4e4e4;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background-color: #ccc;
+}
+
+/* Paragraph Section */
+.text-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center; /* Vertically align paragraph */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: left;
+}
+
+/* Mobile Responsive Styling (≤ 768px) */
+@media (max-width: 768px) {
+  .header-wrapper {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-wrapper,
+  .text-wrapper {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .text-wrapper {
+    text-align: center;
+    align-items: flex-start;
+  }
+}

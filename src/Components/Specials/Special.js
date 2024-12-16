@@ -1,6 +1,6 @@
 import React from "react";
 import "./Special.css";
-import logo from "../../../images/lemon dessert.jpg";
+import logo from "../../images/lemon dessert.jpg";
 
 const specialsData = [
   {

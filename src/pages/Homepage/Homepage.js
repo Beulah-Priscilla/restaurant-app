@@ -3,18 +3,18 @@ import CallToAction from "../../Components/CallToAction/CallToAction";
 import Special from "../../Components/Specials/Special";
 import CustomersSay from "../../Components/CustomersSay/CustomersSay";
 import Chicago from "../../Components/Chicago/Chicago";
-import ReserveTable from "../../Components/ReserveTable/ReserveTable";
+// import ReserveTable from "../../Components/ReserveTable/ReserveTable";
 
 
-function Main() {
+function Homepage() {
   return ( <>
       <CallToAction />
       <Special />
       <CustomersSay />
       <Chicago />
       </>
-      );
+    );
 }
 
 
-export default Main;
+export default Homepage;

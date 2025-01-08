@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ReserveTable.css';
+import { useNavigate } from 'react-router-dom';
 
 const ReserveTable = () => {
   // Define state variables for the form fields
@@ -8,6 +9,9 @@ const ReserveTable = () => {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
   const [availableTimes] = useState(['17:00', '18:00', '19:00']);
+  const navigate = useNavigate();
+
+
 
   // Handlers to update state when form inputs change
   const handleDateChange = (event) => {
@@ -29,7 +33,8 @@ const ReserveTable = () => {
   // Handle form submission (for now just log the values)
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({ date, time, guests, occasion });
+    const bookingDetails = { date, time, guests, occasion };
+    navigate('/confirmation', { state: bookingDetails });
   };
 
   return (

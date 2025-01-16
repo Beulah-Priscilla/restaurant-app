@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './BookingForm.css';
 import { useNavigate } from 'react-router-dom';
 
-
-
 const BookingForm = ({availableTimes, dispatch, submitForm}) => {
   // Define state variables for the form fields
   const [date, setDate] = useState();
@@ -51,7 +49,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
       <div className="content-wrapper">
         {/* Form Section */}
         <div className="form-wrapper">
-          <form className="reserve-form" onSubmit={handleSubmit}>
+          <form className="reserve-form" onSubmit={handleSubmit} aria-label="Reservation Form">
             <label htmlFor="date">Choose date</label>
             <input
               type="date"
@@ -59,10 +57,11 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
               value={date}
               onChange={handleDateChange}
               required
+              aria-required="true"
             />
 
             <label htmlFor="time">Choose time</label>
-            <select id="time" value={time} onChange={handleTimeChange}>
+            <select id="time" value={time} onChange={handleTimeChange} aria-required="true">
               {availableTimes.map((availableTime) => (
                 <option key={availableTime} value={availableTime}>
                   {availableTime}
@@ -78,6 +77,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
               max="10"
               value={guests}
               onChange={handleGuestsChange}
+              aria-required="true"
             />
 
             <label htmlFor="occasion">Occasion</label>
@@ -85,13 +85,14 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
               id="occasion"
               value={occasion}
               onChange={handleOccasionChange}
+              aria-required="true"
             >
               <option>Birthday</option>
               <option>Anniversary</option>
               <option>Other</option>
             </select>
 
-            <button type="submit" className="submit-btn">
+            <button type="submit" className="submit-btn" aria-label="Submit Reservation">
               Make Your Reservation
             </button>
           </form>

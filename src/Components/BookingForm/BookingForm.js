@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const BookingForm = ({availableTimes, dispatch}) => {
+const BookingForm = ({availableTimes, dispatch, submitForm}) => {
   // Define state variables for the form fields
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState();
   const [time, setTime] = useState('17:00');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
@@ -35,6 +35,7 @@ const BookingForm = ({availableTimes, dispatch}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const bookingDetails = { date, time, guests, occasion };
+    submitForm(bookingDetails)
     navigate('/confirmation', { state: bookingDetails });
   };
 
@@ -90,7 +91,7 @@ const BookingForm = ({availableTimes, dispatch}) => {
               <option>Other</option>
             </select>
 
-            <button type="submit" className="submit-btn">
+            <button type="submit" disabled={Boolean(date)} className="submit-btn">
               Make Your Reservation
             </button>
           </form>

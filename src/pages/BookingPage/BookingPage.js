@@ -3,9 +3,9 @@ import CallToAction from "../../Components/CallToAction/CallToAction";
 import CustomersSay from "../../Components/CustomersSay/CustomersSay";
 import Chicago from "../../Components/Chicago/Chicago";
 import BookingForm from "../../Components/BookingForm/BookingForm";
-import { fetchAPI } from "../../API";
+import { fetchAPI, submitAPI } from "../../API";
 
-const reducer = (state, action) => {
+export const reducer = (state, action) => {
   switch (action.type) {
     case "update_times":
       return updateTimes(action.selectedDate);
@@ -14,11 +14,15 @@ const reducer = (state, action) => {
   }
 };
 
-const updateTimes = (selectedDate) => {
+export const submitForm = (formData) => {
+  submitAPI(formData)
+}
+
+export const updateTimes = (selectedDate) => {
   return fetchAPI(new Date(selectedDate));
 }
 
-const initializeTimes = () => {
+export const initializeTimes = () => {
   return fetchAPI(new Date());
 }
 
@@ -27,7 +31,7 @@ function Main() {
 
   return ( <>
       <CallToAction />
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+      <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm}/>
       <CustomersSay />
       <Chicago />
       </>

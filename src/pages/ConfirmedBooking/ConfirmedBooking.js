@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './BookingConfirmation.css'
+import './ConfirmedBooking.css'
 
-const BookingConfirmation = () => {
+const ConfirmedBooking = () => {
   const location = useLocation();
   const { date, time, guests, occasion } = location.state || {};
   return (
@@ -20,4 +20,4 @@ const BookingConfirmation = () => {
   );
 };
 
-export default BookingConfirmation;
+export default ConfirmedBooking;

@@ -91,7 +91,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
               <option>Other</option>
             </select>
 
-            <button type="submit" disabled={Boolean(date)} className="submit-btn">
+            <button type="submit" className="submit-btn">
               Make Your Reservation
             </button>
           </form>

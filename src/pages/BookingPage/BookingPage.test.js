@@ -1,4 +1,3 @@
-
 import { reducer, submitForm, updateTimes, initializeTimes } from "./BookingPage";
 import { fetchAPI, submitAPI } from "../../API";
 

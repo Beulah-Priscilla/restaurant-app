@@ -25,7 +25,7 @@ const specialsData = [
 
 const Special = () => {
   return (
-    <section className="specials container">
+    <section className="specials container" aria-label="Specials Section">
       <h2 className="specials-heading">This week's specials</h2>
       <div className="specials-container">
         {specialsData.map((special, index) => (
@@ -34,6 +34,7 @@ const Special = () => {
               src={special.image}
               alt={special.title}
               className="special-image"
+              aria-label={`${special.title} image`}
               />
               <div className="special-content">
                 <div className="special-header">

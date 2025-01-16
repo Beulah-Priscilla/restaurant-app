@@ -5,10 +5,10 @@ import logo from "../../images/logo-square.png";
 
 const Footer = () => {
     return (
-        <footer>
+        <footer aria-label="Footer">
             <div className="container footer-container">
                 <section className="footer-column">
-                    <img className="logo" src={ logo }></img>
+                    <img className="logo" src={ logo } alt="Company Logo" aria-label="Company Logo"></img>
                 </section>
                 <section className="footer-column">
                     <h4>Navigations</h4>

@@ -6,7 +6,7 @@ import "./Header.css"
 
 const Header = () => {
     return (
-        <header className="container">
+        <header className="container" aria-label="Header">
             <section>
                 <Nav />
             </section>

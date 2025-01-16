@@ -38,11 +38,11 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
   };
 
   return (
-    <div className="reserve-container">
+    <div className="reserve-container" aria-label="Reservation Form Container">
       {/* Heading and subheading */}
       <div className="header-wrapper">
-        <h2>Reserve a table</h2>
-        <p>Reserve your table at Little Lemon Today!</p>
+        <h2 aria-label="Reserve a table">Reserve a table</h2>
+        <p aria-label="Reserve your table at Little Lemon Today!">Reserve your table at Little Lemon Today!</p>
       </div>
 
       {/* Main Content Area: Form and Paragraph */}
@@ -58,10 +58,11 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
               onChange={handleDateChange}
               required
               aria-required="true"
+              aria-label="Choose date"
             />
 
             <label htmlFor="time">Choose time</label>
-            <select id="time" value={time} onChange={handleTimeChange} aria-required="true">
+            <select id="time" value={time} onChange={handleTimeChange} aria-required="true" aria-label="Choose time">
               {availableTimes.map((availableTime) => (
                 <option key={availableTime} value={availableTime}>
                   {availableTime}
@@ -78,6 +79,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
               value={guests}
               onChange={handleGuestsChange}
               aria-required="true"
+              aria-label="Number of guests"
             />
 
             <label htmlFor="occasion">Occasion</label>
@@ -86,6 +88,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
               value={occasion}
               onChange={handleOccasionChange}
               aria-required="true"
+              aria-label="Occasion"
             >
               <option>Birthday</option>
               <option>Anniversary</option>
@@ -100,7 +103,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
 
         {/* Descriptive Text */}
         <div className="text-wrapper">
-          <p>
+          <p aria-label="Description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in
             purus vitae neque commodo pulvinar. Nunc venenatis quis lorem ac
             varius. Curabitur justo est, pretium eget metus at, auctor rhoncus

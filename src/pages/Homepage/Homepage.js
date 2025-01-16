@@ -7,13 +7,16 @@ import Chicago from "../../Components/Chicago/Chicago";
 
 
 function Homepage() {
-  return ( <>
-      <CallToAction />
-      <Special />
-      <CustomersSay />
-      <Chicago />
-      </>
-    );
+  return ( 
+    <>
+      <main aria-label="Homepage main content">
+        <CallToAction />
+        <Special />
+        <CustomersSay />
+        <Chicago />
+      </main>
+    </>
+  );
 }
 
 

@@ -8,13 +8,13 @@ const ConfirmedBooking = () => {
   return (
     <div className="container booking-confirmation">
       <header>
-        <h2 className="title">Booking has been Confirmed</h2>
+        <h2 className="title" aria-label="Booking Confirmation">Booking has been Confirmed</h2>
       </header>
       <section>
-        <p className="details">Date: {date}</p>
-        <p>Time: {time}</p>
-        <p>Guests: {guests}</p>
-        <p>Occasion: {occasion}</p>
+        <p className="details" aria-label={`Date: ${date}`}>Date: {date}</p>
+        <p aria-label={`Time: ${time}`}>Time: {time}</p>
+        <p aria-label={`Guests: ${guests}`}>Guests: {guests}</p>
+        <p aria-label={`Occasion: ${occasion}`}>Occasion: {occasion}</p>
       </section>
     </div>
   );

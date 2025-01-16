@@ -34,15 +34,15 @@ const testimonials = [
 
 function CustomersSay() {
   return (
-    <section className="customers-say">
-      <h2 className="title">Testimonials</h2>
+    <section className="customers-say" aria-label="Customer Testimonials">
+      <h2 className="title" aria-label="Testimonials">Testimonials</h2>
       <div className='container testimonials-container'>
         {testimonials.map((testimonial, index) => (
-          <article key={index} className='testimonial-card'>
-            <div className='stars'>{testimonial.stars}</div>
+          <article key={index} className='testimonial-card' aria-label={`Testimonial from ${testimonial.name}`}>
+            <div className='stars' aria-label={`Rating: ${testimonial.stars}`}>{testimonial.stars}</div>
             <p>{testimonial.text}</p>
             <div className='author'>
-              <img src={testimonial.image} alt={`${testimonial.name}'s profile`}/>
+              <img src={testimonial.image} alt={`${testimonial.name}'s profile`} aria-label={`${testimonial.name}'s profile picture`} />
               <span>{testimonial.name}</span>
             </div>
           </article>

@@ -8,7 +8,7 @@
   font-size: 2rem;
   margin: 20px 0;
   font-family: Arial;
-  padding-left: 110px;
+  padding-left: 30px;
 }
 
 .specials-container {
@@ -29,12 +29,6 @@
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
 }
-
-/* .special-image {
-  width: 100%;
-  height: auto;
-  
-} */
 
 .special-content {
   padding: 15px;

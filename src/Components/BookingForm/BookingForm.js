@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import './ReserveTable.css';
+import './BookingForm.css';
 import { useNavigate } from 'react-router-dom';
 
-const ReserveTable = () => {
+
+
+const BookingForm = ({availableTimes, dispatch}) => {
   // Define state variables for the form fields
   const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
+  const [time, setTime] = useState('17:00');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
-  const [availableTimes] = useState(['17:00', '18:00', '19:00']);
+
   const navigate = useNavigate();
-
-
 
   // Handlers to update state when form inputs change
   const handleDateChange = (event) => {
     setDate(event.target.value);
+    dispatch({type: "update_times", selectedDate: event.target.value});
   };
 
   const handleTimeChange = (event) => {
@@ -56,6 +57,7 @@ const ReserveTable = () => {
               id="date"
               value={date}
               onChange={handleDateChange}
+              required
             />
 
             <label htmlFor="time">Choose time</label>
@@ -110,4 +112,4 @@ const ReserveTable = () => {
   );
 };
 
-export default ReserveTable;
+export default BookingForm;

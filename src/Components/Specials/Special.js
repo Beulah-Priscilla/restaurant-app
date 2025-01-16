@@ -25,7 +25,7 @@ const specialsData = [
 
 const Special = () => {
   return (
-    <section className="specials">
+    <section className="specials container">
       <h2 className="specials-heading">This week's specials</h2>
       <div className="specials-container">
         {specialsData.map((special, index) => (

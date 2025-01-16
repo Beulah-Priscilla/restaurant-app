@@ -11,17 +11,19 @@ import BookingConfirmation from "./pages/BookingConfirmation/BookingConfirmation
 
 function App() {
   return (
-    <>
+    <div className="page-container">
       <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/booking" element={<BookingPage />} />
-          <Route path="/confirmation" element={<BookingConfirmation />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="content">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/booking" element={<BookingPage />} />
+            <Route path="/confirmation" element={<BookingConfirmation />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

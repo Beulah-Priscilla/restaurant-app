@@ -24,14 +24,14 @@ const Footer = () => {
                 <section className="footer-column">
                     <h4>Contacts</h4>
                     <ul className="contacts">
-                        <li>Ontario, Canada A8D 8E4</li>
-                        <li>+1 123 123 1234</li>
+                        <li>Chicago, IL 60000-0000</li>
+                        <li>+351 222 222 222</li>
                     </ul>
                 </section>
                 <section className="footer-column">
                     <h4>Socials</h4>
                     <ul className="socials">
-                        <li><a href="www.instagram.com"><FaInstagram /> instagram</a></li>
+                        <li><a href="https://instagram.com"><FaInstagram /> Instagram</a></li>
                     </ul>
                 </section>
             </div>

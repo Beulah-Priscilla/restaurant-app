@@ -19,7 +19,6 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 1rem;
-  max-width: 1200px;
   justify-content: space-between;
 }
 
